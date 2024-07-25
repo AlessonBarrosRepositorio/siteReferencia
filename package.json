@@ -1,0 +1,23 @@
+{
+  "name": "site01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlessonBarrosRepositorio/siteReferencia.git"
+  },
+  "author": "\"alesson dos santos barros\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlessonBarrosRepositorio/siteReferencia/issues"
+  },
+  "homepage": "https://github.com/AlessonBarrosRepositorio/siteReferencia#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sequelize": "^6.37.3"
+  }
+}
