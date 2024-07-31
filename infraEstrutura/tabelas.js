@@ -1,7 +1,7 @@
 class Tabelas{
-    init(conexao){
-        this.conexao = conexao;
-        this.criartabelasAtendimentos();
+    async init(pool){
+        this.pool = pool;
+        await this.criartabelasAtendimentos();
     }
 
     criartabelasAtendimentos(){
@@ -15,14 +15,26 @@ class Tabelas{
             STATUS ENUM("ativo","realizado","cancelado") DEFAULT "ativo"
             );
         `;
-        this.conexao.query(sql, (error) => {
+
+        let conn;
+        try{
+            conn = await this.pool.getConnection();
+            await conn.query(sql);
+            console.log("Tabela Atendimentos Criada!!!");
+        }catch (error){
+            console.log("Erro ao Criar Tabela Atendimento");
+            console.log(error.message);
+        }finally{
+            if (conn) conn.end();
+        }/*
+        this.pool.query(sql, (error) => {
             if(error) {
                 console.log("error tabela atendimento");
                 console.log(error.messege());
                 return;
             }
             console.log("criou a tabela atendimentos");
-        });
+        });*/
 
     }
 }

@@ -1,6 +1,6 @@
 const mariadb = require("mariadb");
 
-const conexao = mariadb.createConnection({
+const pool = mariadb.createPool({
     host:"localhost",
     port:3306,
     user:"root",
@@ -9,4 +9,4 @@ const conexao = mariadb.createConnection({
     connectionLimit: 5 // Número máximo de conexões no pool
 });
 
-module.exports = conexao;
+module.exports = pool;
