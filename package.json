@@ -18,6 +18,7 @@
   "homepage": "https://github.com/AlessonBarrosRepositorio/siteReferencia#readme",
   "dependencies": {
     "express": "^4.19.2",
+    "mariadb": "^3.3.1",
     "sequelize": "^6.37.3"
   }
 }
