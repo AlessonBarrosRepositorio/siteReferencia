@@ -2,6 +2,8 @@
 const {Router} = require("express");
 const router = Router();
 
+const atendimentoController = require("../controllers/atendimentoController")
+
 //get post put deletd
 
 router.get("/atendimentos", (req, res) =>{
